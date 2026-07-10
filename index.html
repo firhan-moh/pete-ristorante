@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Ristorante Petè | Stabilimento Balneare e Cucina di Mare a Civitanova Marche</title>
+  <meta name="description" content="Sulla spiaggia di Civitanova Marche, Petè Ristorante unisce l'autentica cucina di mare dell'Adriatico ad un'atmosfera gioviale ed elegante. Prenota ora il tuo tavolo o il tuo ombrellone vista mare.">
+  
+  <!-- SEO Meta Tags -->
+  <meta property="og:title" content="Ristorante Petè | Cucina di Mare a Civitanova Marche">
+  <meta property="og:description" content="Stabilimento balneare ed esperienza gastronomica fronte mare a Civitanova Marche. Crudità, primi tradizionali e prenotazione spiaggia diretta.">
+  <meta property="og:image" content="img/real_garden.png">
+  <meta property="og:type" content="website">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="mainNavbar">
+    <div class="navbar-container">
+      <a href="#home" class="logo" id="logoLink">
+        <span class="logo-text">PETÈ</span>
+        <svg class="logo-waves" viewBox="0 0 120 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15,9 Q25,16 35,11" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+          <circle cx="48" cy="12" r="3.5" fill="currentColor"/>
+          <path d="M60,9 C70,16 85,16 98,9" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-subtitle">il gusto, il mare.</span>
+      </a>
+      
+      <!-- Desktop Links -->
+      <ul class="nav-links" id="desktopNavLinks">
+        <li><a href="#home" class="nav-link active" id="navHome">Home</a></li>
+        <li><a href="#about" class="nav-link" id="navAbout">Ristorante</a></li>
+        <li><a href="#menu" class="nav-link" id="navMenu">Il Menu</a></li>
+        <li><a href="#booking" class="nav-link" id="navBooking">Prenotazioni</a></li>
+        <li><a href="#contacts" class="nav-link" id="navContacts">Contatti</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggleBtn" aria-label="Cambia tema chiaro/scuro">
+            <!-- Moon Icon (show in light theme by default) -->
+            <svg id="themeToggleMoon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <!-- Sun Icon (show in dark theme, hidden by default) -->
+            <svg id="themeToggleSun" style="display:none;" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.46 5.05L5.75 4.343a1 1 0 10-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </li>
+      </ul>
+      
+      <!-- Hamburger Menu for Mobile -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Apri menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Side Panel Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <nav class="mobile-nav-links">
+      <a href="#home" class="mobile-nav-link active" id="mobHome">Home</a>
+      <a href="#about" class="mobile-nav-link" id="mobAbout">Ristorante</a>
+      <a href="#menu" class="mobile-nav-link" id="mobMenu">Il Menu</a>
+      <a href="#booking" class="mobile-nav-link" id="mobBooking">Prenotazioni</a>
+      <a href="#contacts" class="mobile-nav-link" id="mobContacts">Contatti</a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <p>Petè Ristorante</p>
+      <p style="font-size:0.75rem; margin-top: 0.5rem;">Lungomare S. Piermanni, 18</p>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Hero Section -->
+    <header class="hero-sec" id="home">
+      <div class="hero-content">
+        <p class="hero-subtitle">Stabilimento Balneare & Ristorante</p>
+        <h1 class="hero-title">Ristorante Petè</h1>
+        <p class="hero-desc">Sotto il cielo di Civitanova Marche, l'autentico sapore dell'Adriatico in una splendida cornice verde fronte mare.</p>
+        <div class="hero-cta-group">
+          <a href="#booking" class="btn btn-primary" id="heroCtaBook">Prenota Tavolo o Spiaggia</a>
+          <a href="#menu" class="btn btn-secondary" id="heroCtaMenu">Il Nostro Menu</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+      <div class="grid-2">
+        <div class="about-img-wrapper" id="aboutImgWrapper">
+          <img src="img/real_garden.png" alt="Giardino e terrazza esterna del Ristorante Petè" width="600" height="450" loading="lazy">
+          <div class="about-card-badge">
+            <div class="badge-num" id="badgeNum">18</div>
+            <div class="badge-text">Lungomare Piermanni</div>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="section-tag">La Nostra Filosofia</span>
+          <h2 class="section-title">Esperienza e Tradizione Marinara</h2>
+          <div class="section-divider" style="margin: 0 0 1.5rem 0;"></div>
+          <p>
+            Benvenuti da <strong>Petè</strong>, stabilimento balneare e ristorante situato sul rinomato lungomare sud di Civitanova Marche. Il nostro locale si distingue per un'elegante veranda immersa nel verde e un'atmosfera gioviale, adatta a pranzi rilassanti e cene romantiche cullati dalla brezza marina.
+          </p>
+          <p>
+            La nostra proposta culinaria si focalizza sulla valorizzazione del pescato freschissimo dell'Adriatico. Abbiniamo la rigorosa selezione delle materie prime a una costante innovazione: dalle nostre celebrate crudità di mare e antipasti gratinati alle Chitarrine allo Scoglio, fino al tradizionale <em>Brodetto alla Civitanovese</em>.
+          </p>
+          <p>
+            Offriamo inoltre il servizio **Stabilimento Balneare** completo, dandoti la possibilità di prenotare online il tuo ombrellone abbinato a comodi lettini nelle file fronte mare.
+          </p>
+          <a href="#menu" class="btn btn-outline" style="margin-top: 1rem;" id="aboutLearnMenu">Il Menu di Petè</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" style="background-color: var(--bg-surface); transition: background-color var(--transition-smooth);">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Dalla Nostra Cucina</span>
+          <h2 class="section-title">I Piatti del Giorno</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Menu Tabs filter -->
+        <div class="menu-tabs" id="menuTabs">
+          <button class="menu-tab-btn active" data-category="all">Tutto</button>
+          <button class="menu-tab-btn" data-category="antipasti">Antipasti & Crudità</button>
+          <button class="menu-tab-btn" data-category="primi">Primi Piatti</button>
+          <button class="menu-tab-btn" data-category="secondi">Secondi</button>
+          <button class="menu-tab-btn" data-category="dolci">Dessert</button>
+          <button class="menu-tab-btn" data-category="vini">Vini</button>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="grid-3 menu-grid" id="menuGrid">
+          
+          <!-- Antipasto 1: Capesante Gratinate (real_scallops.png) -->
+          <article class="menu-item-card" data-category="antipasti" id="itemScallops">
+            <div class="menu-item-img-wrapper">
+              <img src="img/real_scallops.png" alt="Capesante e cannolicchi gratinati al forno" width="360" height="270" loading="lazy">
+              <span class="menu-item-tag">Dalla Griglia</span>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Capesante & Cannolicchi Gratinati</h3>
+                <span class="menu-item-price">€15</span>
+              </div>
+              <p class="menu-item-desc">Capesante fresche e cannolicchi dell'Adriatico dorati al forno con una saporita panatura aromatica alle erbe, aglio e olio extravergine.</p>
+              <div class="menu-item-meta">
+                <span class="meta-tag">Classico</span>
+                <span class="meta-tag">Pesce Fresco</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Primo 1: Spaghetti Carbonara con Vongole (real_dish1.png) -->
+          <article class="menu-item-card" data-category="primi" id="itemCarbonaraClams">
+            <div class="menu-item-img-wrapper">
+              <img src="img/real_dish1.png" alt="Spaghetti Mancini Carbonara di Mare con Vongole" width="360" height="270" loading="lazy">
+              <span class="menu-item-tag">Specialità Petè</span>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Spaghetti Mancini Carbonara & Vongole</h3>
+                <span class="menu-item-price">€18</span>
+              </div>
+              <p class="menu-item-desc">Pasta artigianale di grano marchigiano saltata in una ricca e vellutata crema all'uovo, pecorino romano, guanciale croccante e vongole lupino locali.</p>
+              <div class="menu-item-meta">
+                <span class="meta-tag">Piatto Iconico</span>
+                <span class="meta-tag">Grano Marchigiano</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Antipasto 2: Tataki di Tonno Scottato (real_dish3.png) -->
+          <article class="menu-item-card" data-category="antipasti" id="itemTunaTataki">
+            <div class="menu-item-img-wrapper">
+              <img src="img/real_dish3.png" alt="Tataki di tonno scottato con salsine e chips di patate" width="360" height="270" loading="lazy">
+              <span class="menu-item-tag">Gourmet</span>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Tataki di Tonno Scottato</h3>
+                <span class="menu-item-price">€16</span>
+              </div>
+              <p class="menu-item-desc">Teneri cubi di tonno rosso scottati al punto giusto, adagiati su una delicata crema di patate ed erba cipollina, guarniti con chips croccanti.</p>
+              <div class="menu-item-meta">
+                <span class="meta-tag">Delicato</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Primo 2: Spaghetti allo Scoglio (real_spaghetti.png) -->
+          <article class="menu-item-card" data-category="primi" id="itemSpaghettiScoglio">
+            <div class="menu-item-img-wrapper">
+              <img src="img/real_spaghetti.png" alt="Spaghetti allo scoglio con scampi e frutti di mare" width="360" height="270" loading="lazy">
+              <span class="menu-item-tag">Tradizione</span>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Spaghetti allo Scoglio dell'Adriatico</h3>
+                <span class="menu-item-price">€16</span>
+              </div>
+              <p class="menu-item-desc">Spaghetti saltati con cozze, vongole veraci, calamaretti locali e scampi freschi, cotti in un profumato sughetto leggero di pomodoro ciliegino.</p>
+              <div class="menu-item-meta">
+                <span class="meta-tag">Ricco</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Antipasto 3: Tartare di Tonno e Polpo (real_tartare.png) -->
+          <article class="menu-item-card" data-category="antipasti" id="itemTunaTartare">
+            <div class="menu-item-img-wrapper">
+              <img src="img/real_tartare.png" alt="Tartare di tonno rosso e insalata di polpo su ardesia" width="360" height="270" loading="lazy">
+              <span class="menu-item-tag">Fresco</span>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Tartare di Tonno e Polpo su Ardesia</h3>
+                <span class="menu-item-price">€18</span>
+              </div>
+              <p class="menu-item-desc">Composizione su pietra nera: tartare di tonno rosso pinna gialla marinata agli agrumi e insalata di polpo cotto a bassa temperatura con salsina ai capperi.</p>
+              <div class="menu-item-meta">
+                <span class="meta-tag">Senza Glutine</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Primo 3: Tagliatelle Spigola, Radicchio & Lime (real_tagliatelle.png) -->
+          <article class="menu-item-card" data-category="primi" id="itemTagliatelleBass">
+            <div class="menu-item-img-wrapper">
+              <img src="img/real_tagliatelle.png" alt="Tagliatelle all'uovo fatte in casa saltate con filetti di spigola" width="360" height="270" loading="lazy">
+              <span class="menu-item-tag">Fatto in Casa</span>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Tagliatelle Spigola, Radicchio & Lime</h3>
+                <span class="menu-item-price">€18</span>
+              </div>
+              <p class="menu-item-desc">Tagliatelle all'uovo fatte in casa saltate con filetti di spigola dell'Adriatico, radicchio trevisano precoce brasato e scorzetta fresca di lime.</p>
+              <div class="menu-item-meta">
+                <span class="meta-tag">Fatto in Casa</span>
+                <span class="meta-tag">Fresco</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Secondo 1: Brodetto (real_brodetto.png) -->
+          <article class="menu-item-card" data-category="secondi" id="itemBrodetto">
+            <div class="menu-item-img-wrapper">
+              <img src="img/real_brodetto.png" alt="Zuppa di pesce Brodetto in pentola di coccio" width="360" height="270" loading="lazy">
+              <span class="menu-item-tag">Storico</span>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Brodetto alla Civitanovese</h3>
+                <span class="menu-item-price">€26</span>
+              </div>
+              <p class="menu-item-desc">Tradizionale zuppa di pesce cotta in tegame di coccio con aceto e pomodori verdi, con oltre 9 specie locali di pesci e crostacei dell'Adriatico.</p>
+              <div class="menu-item-meta">
+                <span class="meta-tag">Storico</span>
+                <span class="meta-tag">Specialità locale</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Secondo 2: Fritto Misto (real_fritto.png) -->
+          <article class="menu-item-card" data-category="secondi" id="itemFritto">
+            <div class="menu-item-img-wrapper">
+              <img src="img/real_fritto.png" alt="Piatto di Fritto Misto dell'Adriatico croccante" width="360" height="270" loading="lazy">
+              <span class="menu-item-tag">Croccante</span>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Gran Fritto Misto dell'Adriatico</h3>
+                <span class="menu-item-price">€20</span>
+              </div>
+              <p class="menu-item-desc">Paranza locale, calamari freschi e gamberi fritti in olio bollente per una consistenza croccante e leggera, accompagnati da verdure croccanti.</p>
+              <div class="menu-item-meta">
+                <span class="meta-tag">Croccante</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dolce 1: Tiramisù (real_tiramisu.png) -->
+          <article class="menu-item-card" data-category="dolci" id="itemTiramisu">
+            <div class="menu-item-img-wrapper">
+              <img src="img/real_tiramisu.png" alt="Fetta di Tiramisù al Limoncello estivo" width="360" height="270" loading="lazy">
+              <span class="menu-item-tag">Fresco</span>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Tiramisù al Limoncello</h3>
+                <span class="menu-item-price">€7</span>
+              </div>
+              <p class="menu-item-desc">Alternativa estiva al mascarpone classico: savoiardi artigianali inzuppati nel liquore limoncello di nostra produzione e crema agrumata.</p>
+              <div class="menu-item-meta">
+                <span class="meta-tag">Fresco</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vino 1: Passerina (real_wine.png) -->
+          <article class="menu-item-card" data-category="vini" id="itemVinoPasserina">
+            <div class="menu-item-img-wrapper">
+              <img src="img/real_wine.png" alt="Bottiglia di vino bianco Passerina Offida fresco" width="360" height="270" loading="lazy">
+              <span class="menu-item-tag">Cantina</span>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Passerina Offida DOCG</h3>
+                <span class="menu-item-price">€22</span>
+              </div>
+              <p class="menu-item-desc">Vino bianco biologico delle Marche. Sentori agrumati, beva fresca ed eccellente mineralità. Si abbina perfettamente alla nostra crudità.</p>
+              <div class="menu-item-meta">
+                <span class="meta-tag">Calice €5</span>
+                <span class="meta-tag">Marche</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservations/Booking Section -->
+    <section id="booking" class="container">
+      <div class="section-header">
+        <span class="section-tag">Prenota in Tempo Reale</span>
+        <h2 class="section-title">Ristorante & Stabilimento</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="booking-card">
+        <form id="reservationForm" novalidate>
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="bookName" class="form-label">Nome e Cognome *</label>
+              <input type="text" id="bookName" class="form-input" required minlength="4" placeholder="Es. Mario Rossi">
+              <span class="form-error">Inserisci il tuo nome completo (min. 4 caratteri)</span>
+            </div>
+            <div class="form-group">
+              <label for="bookPhone" class="form-label">Numero di Telefono *</label>
+              <input type="tel" id="bookPhone" class="form-input" required pattern="^[0-9+\s\-]{6,16}$" placeholder="Es. 333 1234567">
+              <span class="form-error">Inserisci un numero di telefono valido</span>
+            </div>
+          </div>
+          
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="bookEmail" class="form-label">Indirizzo Email *</label>
+              <input type="email" id="bookEmail" class="form-input" required placeholder="Es. mario.rossi@example.it">
+              <span class="form-error">Inserisci un indirizzo email valido</span>
+            </div>
+            <div class="form-group">
+              <label for="bookType" class="form-label">Tipo di Prenotazione *</label>
+              <select id="bookType" class="form-input" required>
+                <option value="table" selected>Tavolo al Ristorante</option>
+                <option value="beach">Posto Spiaggia (1 Ombrellone + 2 Lettini)</option>
+                <option value="both">Ristorante + Posto Spiaggia</option>
+              </select>
+              <span class="form-error">Seleziona cosa desideri prenotare</span>
+            </div>
+          </div>
+
+          <!-- Conditional Beach Reservation Fields -->
+          <div id="beachFieldsWrapper" style="display:none; transition: all 0.3s ease; margin-bottom: 1.5rem;">
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="bookBeachRow" class="form-label">Posizione Ombrellone *</label>
+                <select id="bookBeachRow" class="form-input">
+                  <option value="first" selected>Prima Fila (Fronte Mare) - €35/giorno</option>
+                  <option value="mid">Seconda o Terza Fila - €30/giorno</option>
+                  <option value="back">Quarta Fila e oltre - €25/giorno</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="bookBeachDays" class="form-label">Numero di Giorni *</label>
+                <input type="number" id="bookBeachDays" class="form-input" min="1" max="90" value="1">
+                <span class="form-error">Inserisci una durata valida (min. 1 giorno)</span>
+              </div>
+            </div>
+            
+            <div id="beachPriceCalc" style="margin-top: 1rem; padding: 1rem; background: var(--border-color); border-radius: var(--border-radius-sm); border: 1px solid var(--border-color); font-weight:600; text-align: center;">
+              Costo Spiaggia Stimato: <span id="beachTotalCost" style="color: var(--gold); font-size:1.2rem;">€35</span>
+            </div>
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="bookGuests" class="form-label">Ospiti (Ristorante) *</label>
+              <select id="bookGuests" class="form-input" required>
+                <option value="" disabled selected>Seleziona persone</option>
+                <option value="1">1 Persona</option>
+                <option value="2">2 Persone</option>
+                <option value="3">3 Persone</option>
+                <option value="4">4 Persone</option>
+                <option value="5">5 Persone</option>
+                <option value="6">6 Persone</option>
+                <option value="7">7 Persone</option>
+                <option value="8">8+ Persone</option>
+              </select>
+              <span class="form-error">Seleziona il numero di ospiti per il ristorante</span>
+            </div>
+            <div class="form-group">
+              <label for="bookDate" class="form-label">Data *</label>
+              <input type="date" id="bookDate" class="form-input" required>
+              <span class="form-error">Seleziona una data futura</span>
+            </div>
+          </div>
+
+          <div class="form-group-row" id="timeRowWrapper">
+            <div class="form-group">
+              <label for="bookTime" class="form-label">Orario Pranzo/Cena *</label>
+              <select id="bookTime" class="form-input" required>
+                <option value="" disabled selected>Seleziona orario</option>
+                <optgroup label="Pranzo">
+                  <option value="12:30">12:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="13:30">13:30</option>
+                  <option value="14:00">14:00</option>
+                </optgroup>
+                <optgroup label="Cena">
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
+                  <option value="21:30">21:30</option>
+                </optgroup>
+              </select>
+              <span class="form-error">Seleziona un orario</span>
+            </div>
+            <div class="form-group">
+              <!-- filler or custom note -->
+              <span class="form-label" style="visibility:hidden;">Note</span>
+              <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:auto; margin-bottom: 0.5rem;">Per spiaggia l'accesso è dalle 08:30 alle 19:00.</p>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 2rem;">
+            <label for="bookMessage" class="form-label">Richieste Particolari / Preferenza Ombrellone (Opzionale)</label>
+            <textarea id="bookMessage" class="form-input" rows="3" placeholder="Es. Intolleranze alimentari, ombrellone vicino alla passerella disabili..."></textarea>
+          </div>
+
+          <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 320px;" id="bookSubmitBtn">Invia Richiesta</button>
+          </div>
+        </form>
+        <p class="booking-note">Verrai ricontattato via email o telefono per la conferma della prenotazione entro 2 ore.</p>
+      </div>
+    </section>
+
+    <!-- Contacts & Location Section -->
+    <section id="contacts" style="background-color: var(--bg-surface); transition: background-color var(--transition-smooth);">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Dove Trovarci</span>
+          <h2 class="section-title">Contatti & Orari</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="grid-2">
+          <!-- Contact Info List -->
+          <div class="contact-info-list" id="contactInfo">
+            
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"></path></svg>
+              </div>
+              <div class="contact-info-text">
+                <h4>Indirizzo</h4>
+                <p>Lungomare Sergio Piermanni, 18, 62012 Civitanova Marche MC</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.57a.99.99 0 00-1.01.24l-2.2 2.2a15.045 15.045 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1A11.36 11.36 0 018.7 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.58c0-.56-.45-1.04-1-1.04z"></path></svg>
+              </div>
+              <div class="contact-info-text">
+                <h4>Telefono</h4>
+                <p><a href="tel:0733818065" id="clickPhone">0733 818065</a></p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+              </div>
+              <div class="contact-info-text">
+                <h4>Email</h4>
+                <p><a href="mailto:info@rpeteristorante.it" id="clickEmail">info@rpeteristorante.it</a></p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"></path></svg>
+              </div>
+              <div class="contact-info-text">
+                <h4>Orari di Apertura</h4>
+                <p>Martedì - Domenica: 12:00 - 15:00, 19:30 - 23:30<br>Lunedì: Giorno di Chiusura</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Google Map Embed Iframe -->
+          <div class="map-wrapper" id="aboutMap">
+            <iframe title="Mappa della posizione di Petè Ristorante a Civitanova Marche" src="https://maps.google.it/maps?q=Lungomare Sergio Piermanni, 18, 62012, Civitanova Marche MC&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Reservation Confirmation Modal (HTML5 Native dialog) -->
+  <dialog class="reservation-modal" id="reservationModal">
+    <div class="modal-content">
+      <div class="modal-icon-success">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+      <h3 class="modal-title">Richiesta Inviata!</h3>
+      <p class="modal-desc">Grazie per aver scelto Petè. Abbiamo ricevuto la tua richiesta di prenotazione. Ecco i dettagli:</p>
+      
+      <div class="modal-details">
+        <div class="modal-detail-row">
+          <span class="modal-detail-label">Nome:</span>
+          <span class="modal-detail-val" id="modalValName">-</span>
+        </div>
+        <div class="modal-detail-row">
+          <span class="modal-detail-label">Tipo Prenotazione:</span>
+          <span class="modal-detail-val" id="modalValType">-</span>
+        </div>
+        <div class="modal-detail-row" id="modalRowGuests">
+          <span class="modal-detail-label">Ospiti Ristorante:</span>
+          <span class="modal-detail-val" id="modalValGuests">-</span>
+        </div>
+        <div class="modal-detail-row">
+          <span class="modal-detail-label">Data:</span>
+          <span class="modal-detail-val" id="modalValDate">-</span>
+        </div>
+        <div class="modal-detail-row" id="modalRowTime">
+          <span class="modal-detail-label">Orario Tavolo:</span>
+          <span class="modal-detail-val" id="modalValTime">-</span>
+        </div>
+        <div class="modal-detail-row" id="modalRowBeach" style="display:none;">
+          <span class="modal-detail-label">Ombrellone:</span>
+          <span class="modal-detail-val" id="modalValBeachDetails">-</span>
+        </div>
+        <div class="modal-detail-row" id="modalRowBeachCost" style="display:none;">
+          <span class="modal-detail-label">Costo Spiaggia:</span>
+          <span class="modal-detail-val" id="modalValBeachCost">-</span>
+        </div>
+      </div>
+      
+      <button class="btn btn-primary" style="width: 100%;" id="modalCloseBtn">Ottimo, grazie</button>
+    </div>
+  </dialog>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-logo">
+        <span class="logo-text">PETÈ</span>
+        <svg class="logo-waves" viewBox="0 0 120 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15,9 Q25,16 35,11" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+          <circle cx="48" cy="12" r="3.5" fill="currentColor"/>
+          <path d="M60,9 C70,16 85,16 98,9" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-subtitle" style="color: rgba(255,255,255,0.7);">il gusto, il mare.</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#home" class="footer-link">Home</a></li>
+        <li><a href="#about" class="footer-link">Ristorante</a></li>
+        <li><a href="#menu" class="footer-link">Il Menu</a></li>
+        <li><a href="#booking" class="footer-link">Prenotazioni</a></li>
+        <li><a href="#contacts" class="footer-link">Contatti</a></li>
+      </ul>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ristorante Petè. Tutti i diritti riservati.</p>
+        <p>P.IVA 02019400437 | Civitanova Marche</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
