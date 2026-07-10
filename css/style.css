@@ -1054,6 +1054,31 @@
     color: rgba(255, 255, 255, 0.75);
   }
 
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-block: 0.5rem 1rem;
+  }
+
+  .footer-socials a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color var(--transition-snappy), transform var(--transition-snappy);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-socials a:hover {
+    color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  .footer-socials svg {
+    width: 24px;
+    height: 24px;
+  }
+
   .footer-links {
     display: flex;
     flex-wrap: wrap;
